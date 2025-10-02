@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Mail, Github, FileText, Moon, Sun } from 'lucide-react';
+import { Moon, Sun } from 'lucide-react';
 
 interface HeaderProps {
   onContactClick: () => void;

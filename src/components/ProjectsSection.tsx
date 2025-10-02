@@ -1,5 +1,4 @@
 import React from 'react';
-import { Project } from '../types';
 import { projects } from '../data/projects';
 import { Github, ExternalLink, Star } from 'lucide-react';
 
