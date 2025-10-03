@@ -76,7 +76,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick, onAboutClick }) => {
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-pink-400 to-purple-500 rounded-full blur-3xl opacity-20 animate-pulse-slow"></div>
               <img 
-                src="/src/assets/RinaPhoto.jpeg" 
+                src="https://res.cloudinary.com/dcsbgpsck/image/upload/v1759513866/RinaPhoto_kruxli.jpg" 
                 alt="Rina Newhouse" 
                 className="relative w-80 h-80 lg:w-96 lg:h-96 object-cover rounded-full shadow-2xl border-4 border-white dark:border-gray-800"
               />

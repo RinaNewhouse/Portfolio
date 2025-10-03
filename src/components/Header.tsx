@@ -34,7 +34,7 @@ const Header: React.FC<HeaderProps> = ({ onContactClick, onAboutClick }) => {
       <nav className="container mx-auto px-6 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <img 
-            src="/src/assets/Rina Logo.png" 
+            src="https://res.cloudinary.com/dcsbgpsck/image/upload/v1759513811/Rina_Logo_rafszh.png" 
             alt="Rina Newhouse" 
             className="h-10 w-10"
           />
