@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import SkillsSection from './components/SkillsSection';
 import ProjectsSection from './components/ProjectsSection';
+import BlogSection from './components/BlogSection';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
 
@@ -40,6 +41,8 @@ function App() {
         <SkillsSection />
         
         <ProjectsSection />
+        
+        <BlogSection />
       </main>
       
       <Footer onContactClick={handleContactClick} />

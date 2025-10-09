@@ -8,6 +8,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onContactClick, onAboutClick }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
@@ -27,6 +28,15 @@ const Header: React.FC<HeaderProps> = ({ onContactClick, onAboutClick }) => {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     }
+  };
+
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const handleMobileMenuClick = (action: () => void) => {
+    action();
+    setIsMobileMenuOpen(false);
   };
 
   return (
@@ -58,6 +68,14 @@ const Header: React.FC<HeaderProps> = ({ onContactClick, onAboutClick }) => {
             </a>
           </li>
           <li>
+            <a 
+              href="#blog"
+              className="text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium"
+            >
+              Blog
+            </a>
+          </li>
+          <li>
             <button 
               onClick={onContactClick}
               className="text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium"
@@ -76,12 +94,62 @@ const Header: React.FC<HeaderProps> = ({ onContactClick, onAboutClick }) => {
         </ul>
 
         {/* Mobile menu button */}
-        <button className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800">
-          <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
+        <button 
+          onClick={toggleMobileMenu}
+          className="md:hidden p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-200"
+        >
+          {isMobileMenuOpen ? (
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </nav>
+
+      {/* Mobile menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-lg">
+          <div className="container mx-auto px-6 py-4 space-y-4">
+            <button 
+              onClick={() => handleMobileMenuClick(onAboutClick)}
+              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2"
+            >
+              About
+            </button>
+            <a 
+              href="#projects"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2"
+            >
+              Projects
+            </a>
+            <a 
+              href="#blog"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2"
+            >
+              Blog
+            </a>
+            <button 
+              onClick={() => handleMobileMenuClick(onContactClick)}
+              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2"
+            >
+              Contact
+            </button>
+            <button 
+              onClick={toggleTheme}
+              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2 flex items-center space-x-2"
+            >
+              <span>{isDarkMode ? 'Light Mode' : 'Dark Mode'}</span>
+              {isDarkMode ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 };
