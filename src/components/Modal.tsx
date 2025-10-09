@@ -10,9 +10,9 @@ interface ModalProps {
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    user_name: '',
+    user_email: '',
+    user_message: ''
   });
   const [isLoading, setIsLoading] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
@@ -31,12 +31,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
     try {
       await emailjs.send(
         'service_7xmu46e',
-        'template_s0uio9z',
+        'template_2bw3a1p',
         formData,
         'XZiqXvXGUZ2WaKUne'
       );
       setIsSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ user_name: '', user_email: '', user_message: '' });
     } catch (error) {
       alert('The email service is temporarily unavailable. Please contact me directly at rina.newhouse@gmail.com');
     } finally {
@@ -135,8 +135,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
                     </label>
                     <input
                       type="text"
-                      name="name"
-                      value={formData.name}
+                      name="user_name"
+                      value={formData.user_name}
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -149,8 +149,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
                     </label>
                     <input
                       type="email"
-                      name="email"
-                      value={formData.email}
+                      name="user_email"
+                      value={formData.user_email}
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-pink-500 focus:border-transparent bg-white dark:bg-gray-800 text-gray-900 dark:text-white"
@@ -162,8 +162,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
                       Message
                     </label>
                     <textarea
-                      name="message"
-                      value={formData.message}
+                      name="user_message"
+                      value={formData.user_message}
                       onChange={handleInputChange}
                       required
                       rows={4}

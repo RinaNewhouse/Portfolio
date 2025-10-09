@@ -114,8 +114,14 @@ const BlogSection: React.FC = () => {
 
         {/* Modal for Full Post */}
         {selectedPost && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-            <div className="bg-white dark:bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+            onClick={() => setSelectedPost(null)}
+          >
+            <div 
+              className="bg-white dark:bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="p-8">
                 <div className="flex justify-between items-start mb-6">
                   <div>
@@ -145,9 +151,9 @@ const BlogSection: React.FC = () => {
                   ))}
                 </div>
                 
-                <div className="prose prose-lg dark:prose-invert max-w-none">
+                <div className="max-w-none">
                   <div 
-                    className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line"
+                    className="text-gray-700 dark:text-gray-300 leading-relaxed whitespace-pre-line [&_a]:text-pink-500 [&_a]:hover:text-pink-600 [&_a]:underline"
                     dangerouslySetInnerHTML={{ __html: selectedPost.content }}
                   />
                 </div>
