@@ -41,6 +41,12 @@ const SkillsSection: React.FC = () => {
     return acc;
   }, {} as Record<string, Skill[]>);
 
+  // Calculate average proficiency for each category
+  const getCategoryAverage = (categorySkills: Skill[]) => {
+    const total = categorySkills.reduce((sum, skill) => sum + skill.proficiency, 0);
+    return Math.round(total / categorySkills.length);
+  };
+
   return (
     <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
@@ -105,15 +111,15 @@ const SkillsSection: React.FC = () => {
           <h3 className="text-2xl font-bold mb-4">Overall Technical Proficiency</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <div className="text-3xl font-bold mb-2">85%</div>
+              <div className="text-3xl font-bold mb-2">{getCategoryAverage(groupedSkills.frontend || [])}%</div>
               <div className="text-pink-100">Frontend Development</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">70%</div>
+              <div className="text-3xl font-bold mb-2">{getCategoryAverage(groupedSkills.backend || [])}%</div>
               <div className="text-pink-100">Backend Development</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">80%</div>
+              <div className="text-3xl font-bold mb-2">{getCategoryAverage([...(groupedSkills.tools || []), ...(groupedSkills.design || [])])}%</div>
               <div className="text-pink-100">Tools & Design</div>
             </div>
           </div>
