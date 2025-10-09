@@ -21,7 +21,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               className="group flex items-center space-x-3 text-white hover:text-pink-400 transition-colors duration-200"
             >
               <img 
-                src="/src/assets/Rina Logo.png" 
+                src="https://res.cloudinary.com/dcsbgpsck/image/upload/v1759513811/Rina_Logo_rafszh.png" 
                 alt="Rina Newhouse" 
                 className="h-12 w-12"
               />

@@ -17,7 +17,7 @@ export const projects: Project[] = [
     description: 'The newly-released Johns Hopkins Hillel Website. The ultimate place where Jewish life and individuality meet and thrive.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
     githubUrl: 'https://github.com/RinaNewhouse/hopkins-hillel-website',
-    liveUrl: 'https://hopkins-hillel-website.vercel.app/',
+    liveUrl: 'https://hopkinshillel.org/',
     imageUrl: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1759527794/hopkins_hillel_mockup_fg18tb.png',
     featured: true
   },
