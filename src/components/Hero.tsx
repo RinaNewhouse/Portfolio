@@ -27,7 +27,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
             </h1>
             
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              I'm a Jewish <span className="font-bold text-pink-500">Frontend Software Engineer</span> honing in my passions for Judaism and building web applications that are visually dynamic and offer an exceptional user experience.
+              A <span className="font-bold text-pink-500">software engineer</span> specializing in <span className="font-bold text-pink-500">frontend and fullstack development</span>, transforming little ideas into big results.
               <br />
               Here's a bit more about me.
             </p>
