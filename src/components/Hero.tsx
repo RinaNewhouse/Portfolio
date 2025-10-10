@@ -3,10 +3,9 @@ import { Github, Linkedin, FileText, Mail, ChevronDown } from 'lucide-react';
 
 interface HeroProps {
   onContactClick: () => void;
-  onAboutClick: () => void;
 }
 
-const Hero: React.FC<HeroProps> = ({ onContactClick, onAboutClick }) => {
+const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-white via-pink-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Animated background shapes */}
@@ -30,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick, onAboutClick }) => {
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
               I'm a Jewish <span className="font-bold text-pink-500">Frontend Software Engineer</span> honing in my passions for Judaism and building web applications that are visually dynamic and offer an exceptional user experience.
               <br />
-              Here's a bit more <button onClick={onAboutClick} className="font-bold text-pink-500 hover:text-pink-600 transition-colors cursor-pointer">about me.</button>
+              Here's a bit more about me.
             </p>
 
             {/* Social links */}

@@ -9,17 +9,13 @@ import Footer from './components/Footer';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalMode, setModalMode] = useState<'about' | 'contact'>('about');
+  const [modalMode, setModalMode] = useState<'contact'>('contact');
 
   const handleContactClick = () => {
     setModalMode('contact');
     setIsModalOpen(true);
   };
 
-  const handleAboutClick = () => {
-    setModalMode('about');
-    setIsModalOpen(true);
-  };
 
   const handleCloseModal = () => {
     setIsModalOpen(false);
@@ -29,13 +25,11 @@ function App() {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       <Header 
         onContactClick={handleContactClick}
-        onAboutClick={handleAboutClick}
       />
       
       <main>
         <Hero 
           onContactClick={handleContactClick}
-          onAboutClick={handleAboutClick}
         />
         
         <SkillsSection />

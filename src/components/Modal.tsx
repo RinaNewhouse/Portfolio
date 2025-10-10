@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  mode: 'about' | 'contact';
+  mode: 'contact';
 }
 
 const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
@@ -50,57 +50,8 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
     <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white dark:bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
         <div className="flex">
-          {/* About Section */}
-          {mode === 'about' && (
-            <div className="flex-1 p-8">
-              <div className="flex justify-between items-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  Here's a bit about me.
-                </h3>
-                <button 
-                  onClick={onClose}
-                  className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
-                >
-                  <X className="h-6 w-6" />
-                </button>
-              </div>
-              
-              <h4 className="text-xl font-semibold text-pink-500 mb-4">
-                Frontend Software Engineer.
-              </h4>
-              
-              <p className="text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-                I'm a 24-year-old Jewish-American <span className="font-bold text-pink-500">frontend software engineer</span> with a strong passion for developing websites with great <span className="font-bold text-pink-500">user experiences.</span>
-                <br /><br />
-                I currently work on extremely difficult engineering problems and learn from a team consisting of some of the most <span className="font-bold text-pink-500">talented</span> and <span className="font-bold text-pink-500">experienced</span> software engineers every day.
-              </p>
-
-              {/* Skills showcase */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[
-                  { name: 'HTML', image: '/src/assets/Picture HTML.png' },
-                  { name: 'CSS', image: '/src/assets/Picture CSS.jpg' },
-                  { name: 'JavaScript', image: '/src/assets/Picture JavaScript.jpg' },
-                  { name: 'React', image: '/src/assets/Picture React.jpg' }
-                ].map((skill) => (
-                  <div key={skill.name} className="text-center">
-                    <img 
-                      src={skill.image} 
-                      alt={skill.name}
-                      className="w-16 h-16 mx-auto mb-2 rounded-lg object-cover"
-                    />
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      {skill.name}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           {/* Contact Section */}
-          {mode === 'contact' && (
-            <div className="flex-1 p-8">
+          <div className="flex-1 p-8">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
                   Let's have a chat!
@@ -190,8 +141,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
                   </button>
                 </form>
               )}
-            </div>
-          )}
+          </div>
         </div>
       </div>
     </div>

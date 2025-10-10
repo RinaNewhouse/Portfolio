@@ -3,10 +3,9 @@ import { Moon, Sun } from 'lucide-react';
 
 interface HeaderProps {
   onContactClick: () => void;
-  onAboutClick: () => void;
 }
 
-const Header: React.FC<HeaderProps> = ({ onContactClick, onAboutClick }) => {
+const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -51,14 +50,6 @@ const Header: React.FC<HeaderProps> = ({ onContactClick, onAboutClick }) => {
         </div>
         
         <ul className="hidden md:flex items-center space-x-8">
-          <li>
-            <button 
-              onClick={onAboutClick}
-              className="text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium"
-            >
-              About
-            </button>
-          </li>
           <li>
             <a 
               href="#projects"
@@ -114,12 +105,6 @@ const Header: React.FC<HeaderProps> = ({ onContactClick, onAboutClick }) => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-lg">
           <div className="container mx-auto px-6 py-4 space-y-4">
-            <button 
-              onClick={() => handleMobileMenuClick(onAboutClick)}
-              className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2"
-            >
-              About
-            </button>
             <a 
               href="#projects"
               onClick={() => setIsMobileMenuOpen(false)}
