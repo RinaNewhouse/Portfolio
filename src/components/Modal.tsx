@@ -5,10 +5,9 @@ import emailjs from '@emailjs/browser';
 interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
-  mode: 'contact';
 }
 
-const Modal: React.FC<ModalProps> = ({ isOpen, onClose, mode }) => {
+const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const [formData, setFormData] = useState({
     user_name: '',
     user_email: '',

@@ -9,10 +9,8 @@ import Footer from './components/Footer';
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [modalMode, setModalMode] = useState<'contact'>('contact');
 
   const handleContactClick = () => {
-    setModalMode('contact');
     setIsModalOpen(true);
   };
 
@@ -44,7 +42,6 @@ function App() {
       <Modal 
         isOpen={isModalOpen}
         onClose={handleCloseModal}
-        mode={modalMode}
       />
     </div>
   );
