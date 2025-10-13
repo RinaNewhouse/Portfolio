@@ -14,7 +14,7 @@ export const projects: Project[] = [
   {
     id: 'dream-finder',
     title: 'Dream Finder',
-    description: 'End the pre-movie-picking fights today. Find your dream movie with a tailored approach to decide your perfect flick that everyone will love.',
+    description: 'Movie recommendation platform featuring external API integration, dynamic search, responsive design, and user-friendly interface.',
     technologies: ['HTML', 'CSS', 'JavaScript'],
     githubUrl: 'https://github.com/RinaNewhouse/Dream-Finder',
     liveUrl: 'https://rinanewhouse.github.io/Dream-Finder/',
@@ -24,7 +24,7 @@ export const projects: Project[] = [
   {
     id: 'nft-commerce',
     title: 'NFT E-Commerce',
-    description: 'Professional NFT marketplace mockup featuring clean UI design, product browsing, and responsive layouts..',
+    description: 'Professional NFT marketplace mockup featuring clean UI design, product browsing, and responsive layouts.',
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
     githubUrl: 'https://github.com/RinaNewhouse/rina-internship-nft-sample',
     liveUrl: 'https://rina-internship-website-sample.vercel.app/',
@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     id: 'online-library',
     title: 'Online Library',
-    description: "Can't bother to drive to an actual library? Amazon shipping taking way too long? Get instant access to the book you purchased and have it not break the bank (#WinWin).",
+    description: "Digital library platform built with React featuring component architecture, state management, and responsive design for optimal user experience.",
     technologies: ['HTML', 'CSS', 'JavaScript', 'React'],
     githubUrl: 'https://github.com/RinaNewhouse/React-Library',
     liveUrl: 'https://react-library-black.vercel.app/',
