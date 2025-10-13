@@ -107,7 +107,7 @@ const SkillsSection: React.FC = () => {
         </div>
 
         {/* Overall proficiency summary */}
-        <div className="mt-16 bg-gradient-to-r from-pink-500 to-purple-600 rounded-2xl p-8 text-white text-center">
+        <div className="mt-16 bg-pink-500 rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl font-bold mb-4">Overall Technical Proficiency</h3>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
