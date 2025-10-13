@@ -52,10 +52,10 @@ const SkillsSection: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-            My <span className="text-pink-500">Skills</span> & <span className="text-pink-500">Proficiency</span>
+            My <span className="text-pink-500">Technical</span> <span className="text-pink-500">Skills</span>
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-            Here's a breakdown of my technical skills and proficiency levels across different areas of development.
+            Here's a comprehensive overview of my technical skills across different areas of development.
           </p>
         </div>
 
@@ -69,36 +69,13 @@ const SkillsSection: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="space-y-2">
                 {categorySkills.map((skill) => (
-                  <div key={skill.name} className="group">
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {skill.name}
-                      </span>
-                      <span className="text-sm font-bold text-pink-500">
-                        {skill.proficiency}%
-                      </span>
-                    </div>
-                    
-                    {/* Progress bar */}
-                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
-                      <div 
-                        className={`h-full bg-gradient-to-r ${getCategoryColor(category)} rounded-full transition-all duration-1000 ease-out group-hover:shadow-lg`}
-                        style={{ 
-                          width: `${skill.proficiency}%`,
-                          transitionDelay: `${Math.random() * 0.5}s`
-                        }}
-                      ></div>
-                    </div>
-
-                    {/* Proficiency level indicator */}
-                    <div className="flex justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      <span>Beginner</span>
-                      <span>Intermediate</span>
-                      <span>Advanced</span>
-                      <span>Expert</span>
-                    </div>
+                  <div key={skill.name} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                    <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${getCategoryColor(category)}`}></div>
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+                      {skill.name}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -106,20 +83,20 @@ const SkillsSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Overall proficiency summary */}
+        {/* Technical expertise summary */}
         <div className="mt-16 bg-pink-500 rounded-2xl p-8 text-white text-center">
-          <h3 className="text-2xl font-bold mb-4">Overall Technical Proficiency</h3>
-          <div className="grid md:grid-cols-3 gap-6">
+          <h3 className="text-2xl font-bold mb-6">Technical Expertise</h3>
+          <div className="grid md:grid-cols-3 gap-8">
             <div>
-              <div className="text-3xl font-bold mb-2">{getCategoryAverage(groupedSkills.frontend || [])}%</div>
+              <div className="text-2xl font-bold mb-2">{groupedSkills.frontend?.length || 0} Skills</div>
               <div className="text-pink-100">Frontend Development</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">{getCategoryAverage(groupedSkills.backend || [])}%</div>
+              <div className="text-2xl font-bold mb-2">{groupedSkills.backend?.length || 0} Skills</div>
               <div className="text-pink-100">Backend Development</div>
             </div>
             <div>
-              <div className="text-3xl font-bold mb-2">{getCategoryAverage([...(groupedSkills.tools || []), ...(groupedSkills.design || [])])}%</div>
+              <div className="text-2xl font-bold mb-2">{(groupedSkills.tools?.length || 0) + (groupedSkills.design?.length || 0)} Skills</div>
               <div className="text-pink-100">Tools & Design</div>
             </div>
           </div>
