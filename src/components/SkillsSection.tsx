@@ -41,12 +41,6 @@ const SkillsSection: React.FC = () => {
     return acc;
   }, {} as Record<string, Skill[]>);
 
-  // Calculate average proficiency for each category
-  const getCategoryAverage = (categorySkills: Skill[]) => {
-    const total = categorySkills.reduce((sum, skill) => sum + skill.proficiency, 0);
-    return Math.round(total / categorySkills.length);
-  };
-
   return (
     <section id="skills" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="container mx-auto px-6">
@@ -69,14 +63,14 @@ const SkillsSection: React.FC = () => {
                 </h3>
               </div>
 
-              <div className="space-y-2">
+              <div className="flex flex-wrap gap-2">
                 {categorySkills.map((skill) => (
-                  <div key={skill.name} className="flex items-center space-x-3 p-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                    <div className={`w-3 h-3 rounded-full bg-gradient-to-r ${getCategoryColor(category)}`}></div>
-                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-                      {skill.name}
-                    </span>
-                  </div>
+                  <span 
+                    key={skill.name} 
+                    className={`px-3 py-1.5 rounded-full text-sm font-medium bg-gradient-to-r ${getCategoryColor(category)} text-white hover:shadow-md transition-all duration-200 hover:scale-105`}
+                  >
+                    {skill.name}
+                  </span>
                 ))}
               </div>
             </div>

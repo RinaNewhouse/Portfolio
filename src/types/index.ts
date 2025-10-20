@@ -11,7 +11,6 @@ export interface Project {
 
 export interface Skill {
   name: string;
-  proficiency: number; // 0-100
   category: 'frontend' | 'backend' | 'tools' | 'design';
   icon?: string;
 }
