@@ -12,7 +12,13 @@ export const blogPosts: BlogPost[] = [
         id: "interviews",
         title: "Interviews: What to Expect and How to Prepare",
         date: "October 27, 2025",
-        content: `Today, I spent a bunch of time learning new and innovative ways to interview, both behaviorally and technically. It was really interesting to see where AI can come into the picture for both parts, and also where it doesn’t. There is a certain degree of nit and grit that people will just have to put in. That’s just truth. You can’t not put in the work! AT THE SAME TIME, there are ways said work can be done WAYYYY more efficiently in a way that it can be FUN and ENERGIZING. Say hello to your AI platform of choice, whether that be ChatGPT, Gemini, Claude, or another. (Not not saying there is a family feud in my household about which AI platform is best to use and should be used.) ;)`,
+        content: `Today, I spent a bunch of time learning new and innovative ways to interview, both behaviorally and technically. It was really interesting to see where AI can come into the picture for both parts, and also where it doesn’t. 
+        
+        There is a certain degree of nit and grit that people will just have to put in. That’s just truth. You can’t not put in the work! 
+        
+        AT THE SAME TIME, there are ways said work can be done WAYYYY more efficiently in a way that it can be FUN and ENERGIZING. Say hello to your AI platform of choice, whether that be ChatGPT, Gemini, Claude, or another. (Not not saying there is a family feud in my household about which AI platform is best to use and should be used.) ;)
+        
+        Plus, if anyone has any questions about interviews, please feel free to ask in the modal up above in the top of my portfolio! I don't gatekeep ;)`,
         tags: ["interviews", "preparation", "advice", "ai"],
         excerpt: "Learning new and innovative ways to interview, both behaviorally and technically..."
     },
