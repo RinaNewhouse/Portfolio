@@ -61,7 +61,7 @@ With these measures, vibe coding can continue to be a fun—and safe—way to bu
 
       My last takeaway is that I want to put in actionable steps about how I can utilize Next.js more in the work I do ahead. Something I always like to do when learning something new is creating a plan of action. Action is such a special word, and I love to take it with me wherever I go. One huge area of action I want to do is to migrate the Johns Hopkins Hillel website from Create React App (which was sunsetted on February 14th, 2025—what a day to break up with someone!) to Next.js. 
 
-      Though I have made migration attempts previously, with this conference, I now have a better framework for how exactly I will migrate this truckload of an application (thanks to my 100 JS/JSX files needed for migration) >:) I also am inspired to watch crash course videos of NextJS and to just really get myself to learn more and more. Truly, the best way is through experience, and especially experiences where you feel just a little bit dumb by.
+      Though I have made migration attempts previously, with this conference, I now have a better framework for how exactly I will migrate this truckload of an application (thanks to my 100 JS/JSX files needed for migration) >:) I also am inspired to watch crash course videos of NextJS and to just really get myself to learn more and more. Truly, the best way is through experience, and especially experiences where you feel just a little bit dumb.
 
       I’m excited for the Vercel conference, see you then!`,
     tags: ['conference', 'learning', 'vercel', 'nextjs'],
