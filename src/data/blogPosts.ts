@@ -33,7 +33,7 @@ To counteract that, security measures need to be put in place. Here are three po
 3. <strong>Code Review Options:</strong> Vibe coders are unlikely to bring code reviews. So, they should be built-in to the platform, for higher success rate of secure platforms.
 With these measures, vibe coding can continue to be a fun—and safe—way to build new and innovative applications.`,
     tags: ['conference', 'learning', 'vercel', 'shipai'],
-    excerpt: 'My experience at the SHIP AI conference and how it inspired me to learn more about AI and how it can be used to build secure and innovative applications...',
+    excerpt: 'My experience at the SHIP AI conference and how it inspired me to learn more about AI and vibe coding can be used to build secure and innovative applications...',
   },
   {
     id: 'next-js-conference-2025',
