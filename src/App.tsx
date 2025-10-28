@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Routes, Route, useNavigate, useParams } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import SkillsSection from './components/SkillsSection';
@@ -7,8 +7,6 @@ import ProjectsSection from './components/ProjectsSection';
 import BlogSection from './components/BlogSection';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
-import { projects } from './data/projects';
-import { blogPosts } from './data/blogPosts';
 
 function AppContent() {
   const [isModalOpen, setIsModalOpen] = useState(false);
