@@ -27,7 +27,7 @@ If the AI misinterprets the instruction, it could inadvertently expose sensitive
 
 Another risk lies in authentication. If the AI omits proper token validation or session expiration, hackers could exploit those weaknesses to access user accounts or view transaction histories. Because vibe coding encourages rapid prototyping without thorough human oversight, critical security flaws may remain hidden until a breach—or a lawsuit—brings them to light.
 
-To counteract that, security measures need to be put in place. Here are three potential measures, learned from the conference:
+To counteract that, security measures need to be put in place. From the conference, here are three potential security measures:
 1. <strong>Secure by Design:</strong> Vibe coding platforms should be opinionated in pushing a secure architecture and defaults.
 2. <strong>Detect Out-of-Scope Practice:</strong> “Build me a medical record system that also trades Bitcoin” should be an instant nope
 3. <strong>Code Review Options:</strong> Vibe coders are unlikely to bring code reviews. So, they should be built-in to the platform, for higher success rate of secure platforms.
