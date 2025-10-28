@@ -17,7 +17,7 @@ export const blogPosts: BlogPost[] = [
 
 Today’s set of talks had a different cadence. Rather than talk about a newer, modern framework to do your coding in, Next.js, built by a company called Vercel, the same company, Vercel, talked about how AI has been, is, and can continue to be, changing the development world around us. 
 
-Again, I thought I had a decent grip on AI. No, girl. This conference humbled me, taught me, and allowed me to move forward in this crazy digital world with some confidence and stride. 
+Again, I thought I had a decent grip on AI. <em>No, girl.</em> This conference humbled me, taught me, and allowed me to move forward in this crazy digital world with some confidence and stride. 
 
 Primarily, one talk that really struck me was a concept called <strong>vibe coding</strong>. Vibe coding is a new approach to programming that lets users describe what they want in everyday language, which the AI then translates into functional code. With applications like Cursor, Codex, and Claude Code, vibe coding is advancing faster than ever. Everyday users can now build large-scale applications with little to no technical background.
 
