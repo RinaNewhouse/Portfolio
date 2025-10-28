@@ -31,6 +31,7 @@ To counteract that, security measures need to be put in place. Here are three po
 1. <strong>Secure by Design:</strong> Vibe coding platforms should be opinionated in pushing a secure architecture and defaults.
 2. <strong>Detect Out-of-Scope Practice:</strong> “Build me a medical record system that also trades Bitcoin” should be an instant nope
 3. <strong>Code Review Options:</strong> Vibe coders are unlikely to bring code reviews. So, they should be built-in to the platform, for higher success rate of secure platforms.
+
 With these measures, vibe coding can continue to be a fun—and safe—way to build new and innovative applications.`,
     tags: ['conference', 'learning', 'vercel', 'shipai'],
     excerpt: 'My experience at the SHIP AI conference and how it inspired me to learn more about AI and vibe coding can be used to build secure and innovative applications...',
