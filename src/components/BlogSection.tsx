@@ -1,10 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { BlogPost, blogPosts } from '../data/blogPosts';
 
 const BlogSection: React.FC = () => {
+  const navigate = useNavigate();
+  const { id: postId } = useParams();
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [selectedTag, setSelectedTag] = useState<string>('all');
   const [postsToShow, setPostsToShow] = useState<number>(6); // Start with 6 posts
+
+  // Handle URL-based modal opening
+  useEffect(() => {
+    if (postId) {
+      const post = blogPosts.find(p => p.id === postId);
+      if (post) {
+        setSelectedPost(post);
+      }
+    } else {
+      setSelectedPost(null);
+    }
+  }, [postId]);
+
+  const handlePostClick = (post: BlogPost) => {
+    setSelectedPost(post);
+    navigate(`/blog/${post.id}`);
+  };
+
+  const handleCloseModal = () => {
+    setSelectedPost(null);
+    navigate('/');
+  };
 
   // Get all unique tags
   const allTags = ['all', ...Array.from(new Set(blogPosts.flatMap(post => post.tags)))];
@@ -68,7 +93,7 @@ const BlogSection: React.FC = () => {
             <article
               key={post.id}
               className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer group"
-              onClick={() => setSelectedPost(post)}
+              onClick={() => handlePostClick(post)}
             >
               <div className="mb-4">
                 <div className="text-sm text-pink-500 font-medium mb-2">
@@ -116,7 +141,7 @@ const BlogSection: React.FC = () => {
         {selectedPost && (
           <div 
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
-            onClick={() => setSelectedPost(null)}
+            onClick={handleCloseModal}
           >
             <div 
               className="bg-white dark:bg-gray-900 rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto"
@@ -133,7 +158,7 @@ const BlogSection: React.FC = () => {
                     </h2>
                   </div>
                   <button
-                    onClick={() => setSelectedPost(null)}
+                    onClick={handleCloseModal}
                     className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 text-2xl"
                   >
                     ×
