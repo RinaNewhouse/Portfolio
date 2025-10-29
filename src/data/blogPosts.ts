@@ -9,6 +9,145 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'linkedin-gut-punch',
+    title: 'The LinkedIn Gut Punch — and the Only Band-Aid That Actually Works',
+    date: 'October 28, 2025',
+    content: `
+      Ever scroll through LinkedIn, see someone younger, cooler, and somehow already “thriving,” while your own profile looks like a résumé after a level 7 earthquake?
+
+      You turn off your phone. Walk in circles. Eat ten chocolates. Hope it helps. It doesn’t.
+
+      You still feel like you’re crumbling in a world that seems perfectly engineered to keep you feeling like no matter what you're doing, it's not being received.
+
+      <strong>Welcome to the LinkedIn gut punch—we have extra seats tonight!</strong> 
+      It's not envy. It’s exhaustion. Because you ARE trying. You ARE moving. You ARE doing things. And you DO get credit for that. 
+      
+      But your efforts are not being recognized. 
+      
+      Are you ready to hear why? 
+      
+      (Spoiler alert: you are not going to like this.) 
+      
+      Because your effort is scattered.
+
+      The cure isn’t more energy. It’s direction. And the only band-aid that actually works is <em>focused energy and a structure.</em>
+
+      <strong>1️⃣ The Hidden Truth: You’re Not Underqualified — You’re Unfocused</strong>
+
+      That person who’s “ahead”? They’re not ahead because they’re better. They’re ahead because their path is already defined.
+      
+      Engineers, doctors, lawyers — they get pre-built Google Maps destinations. They know what they want to do and they are doing it. Why? Because somebody who they dream about becoming told them so.
+
+      Creative people? We get fog and 2am rage-ridden ChatGPT sessions trying to figure out how the f*ck we are going to make something that looks good and is actually useful. And then we get frustrated when we can't figure it out.
+
+      So if your field doesn’t hand you a map, it’s your job to draw one. 
+      
+      But first, you need to know what address to put in.
+
+      <strong>2️⃣ Build Your Focused Path</strong>
+      <strong><em>A. Pick a Direction — Just for Now — But ACTUALLY COMMIT TO IT.</strong></em>
+
+      Not forever. Just for 90 days. BUT, if you don't commit to it, how can you get a job? How could you POSSIBLY be successfulif you commit to something, but the second you are met with a challenge, you just give up? Take ten seconds and think about it. Ideally, you would be thinking, "Exactly, that's not how you get a job. That's how you get stuck in a rut. That's how you get stuck in a cycle of frustration and despair. That's how you get stuck in a cycle of not getting what you want." So, humor me: pick a direction and commit to it.
+
+      Three Examples of Directions:
+      → “Recruiter.”
+      → “Data Analyst.”
+      → “Frontend Developer.”
+
+      In roles, junior means someone new. Senior means someone who's been around the block a few times. Start where you are. If you don't know where to start, ask someone who is already where you want to be.
+
+      <strong><em>B. Audit What You’ve Already Got</strong></em>
+
+      List everything you’ve done. Circle what fits your chosen lane. Cross out what doesn’t. Don't discount yourself, but don't do something you think you would suck at either.
+
+      Hodge-podge looks busy. Focus looks professional. If you don't know where to start, just start. This is not going to be hung in an art museum that your employer will view with awe every Sunday afternoon.
+
+      <strong><em>C. Learn Ruthlessly, As Learning Is the Balm to the Soul</strong></em>
+
+      Learning turns the thought, "I can’t" into "I don't yet."
+
+      Treat learning like a job. Schedule it. Track it. (I track my workouts on YouTube comments; I track my frontend development learning on a Google Document) And ask questions. Ask 3 questions a day, 3 different people each time. Strangely enough, Reddit is a fabulous place to ask those questions (there is a subreddit for everything, and there are people smart enough and bored enough who will answer your questions). 
+      
+      When times get tough, make your schedule work for you. It doesn't matter if you do it for exactly 8 minutes one day, an unplanned hour that turns into 3 the next day, and for 15.4 seconds the next day-it is the fact that it is on-average consistent, focused, and that you are doing it. Again, that is what your tracker is for. Even if you do ZERO minutes one day, that is getting put into your tracker.
+
+      <!-- Focus + 3-Month Plan -->
+      <table class="w-full text-left border-collapse my-6">
+        <thead>
+          <tr>
+            <th class="border-b border-gray-300 dark:border-gray-700 py-2 px-3">Focus</th>
+            <th class="border-b border-gray-300 dark:border-gray-700 py-2 px-3">3-Month Learning Plan</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="align-top">
+            <td class="border-b border-gray-200 dark:border-gray-800 py-3 px-3 font-medium">Frontend Developer</td>
+            <td class="border-b border-gray-200 dark:border-gray-800 py-3 px-3">HTML → CSS → JavaScript → React</td>
+          </tr>
+          <tr class="align-top">
+            <td class="border-b border-gray-200 dark:border-gray-800 py-3 px-3 font-medium">Social Media Manager</td>
+            <td class="border-b border-gray-200 dark:border-gray-800 py-3 px-3">Canva → Copywriting → 3 mock campaigns</td>
+          </tr>
+          <tr class="align-top">
+            <td class="border-b border-gray-200 dark:border-gray-800 py-3 px-3 font-medium">Video Editor</td>
+            <td class="border-b border-gray-200 dark:border-gray-800 py-3 px-3">iMovie → Final Cut → 30-sec ad</td>
+          </tr>
+          <tr class="align-top">
+            <td class="py-3 px-3 font-medium">Recruiter</td>
+            <td class="py-3 px-3">ATS → Job Posts → Candidate Sourcing</td>
+          </tr>
+        </tbody>
+      </table>
+
+      Pick one. Go deep. Build small. Ship fast. Perfect is invisible. Finished is valuable.
+
+      And if your custom map doesn’t get you where you want to go?
+      <strong>There’s no shame in switching lanes.</strong>
+
+      Some fields come with pre-drawn maps: engineering, tech, software, to name a few.
+      If structure helps you thrive, use it.
+
+      Find a bootcamp or program with proven outcomes, read the reviews, pay any deposit necessary, and take the leap. Commit. Pursue. And if you do everything it tells you to, I promise you, you will get there. 
+
+      Sometimes the bravest move isn’t pushing through the fog; it’s choosing a clearer trail. This is actually what a lot of people do; this illusion of the "gut punch" is actually a lane switch. At the end of the day, creative or not, both lanes have common denominators: <strong>learning, focus, and structure.</strong>
+
+      <strong><em>D. Build Proof That Speaks</strong></em>
+
+      Your portfolio isn’t stor-age; it’s a stor-y. Make one project a month. Post the process, not just the polish. Proof builds momentum. Momentum attracts opportunity. 
+      
+      \But don't get caught up in other people. They are not you. They are not your path. They are not your journey. They are not your destination. They are not your goal. They are not your dream. They are not your passion. They are not your purpose. They are not your calling. They are not your destiny. They are not your path. They might be a resource; an inspiration; a reminder of what you want to do; but they are not you.
+
+      <strong>3️⃣ One Example: My Story — The Band-Aid in Action</strong>
+
+      Before the bootcamp, I accepted a job that felt humbling to me. I just buckled my seatbelt into career roller coaster. One week I wanted to tutor chemistry full-time, the next I wanted to work in a religious non-profit, the next I wanted to work in a high school (but there were snags there), the next I was sure I was falling. I did a degree, and all I got was this T-shirt? Then, on an Instagram ad, I found a roadmap — six intense weeks that stretched to more, full of deadlines and accountability. It cost money, but it felt like a deposit that I would get paid back as soon as I landed my next tech job. Because of the money, I told myself that I would do it from start to finish, and the bootcamp guaranteed me that if I didn’t land a $45k job by the end of it, they would fully reimburse me and give me an extra $1k for wasting my time. (Alluring…) I didn’t need willpower; I needed structure.
+
+      Here’s what it taught me:
+
+      1. Don’t underestimate your potential; it’s elastic.
+
+      2. You’ll want to quit 17 times; you can’t. As much as I really wanted to, I gently reminded myself that <em>the world moves anyway — with me or without.</em> It was one of the bitterest realizations of my life that I had to accept.
+
+      3. Learning is the balm to the soul. It gave me a reason to keep going.
+
+      4. Direction is the balm to stagnation. It gave me a destination to work towards.
+
+      That roadmap worked because it gave my effort a destination.
+      If your field doesn’t give you one, build one. Make it your own. Make it holy. It is your shrine; it is your holy grail; that is the most creative expression one can do.
+
+      <strong>5️4️⃣ Mindset Shift: The Real Band-Aid</strong>
+
+      The LinkedIn gut punch happens not because someone is "better" than you, but because you realize that you are missing your road map, and finally reclaiming justice for yourself. 
+      That band-aid is learning, focus, and structure. It is your <em>own</em> roadmap to success.
+
+      You’ll still have to build your house.
+      
+      But this time, I’m not the big bad wolf who blew your straw house down and left you in ruins.
+      
+      I’m the big bad wolf who blew it down, looked at the mess, and — for reasons even I don’t understand — am handing you the bricks, to build something that can't be blown down.
+    `,
+    tags: ['focus', 'learning', 'mindset', 'career'],
+    excerpt: 'Feeling scattered on LinkedIn? Here’s what to do. (Spoiler alert: you are not going to like this.)',
+  },
+  {
     id: 'ship-ai-conference-2025',
     title: 'My Second Conference: SHIP AI Conference 2025',
     date: 'October 23, 2025',
