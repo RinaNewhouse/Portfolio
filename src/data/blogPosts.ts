@@ -131,6 +131,7 @@ export const blogPosts: BlogPost[] = [
       4. Direction is the balm to stagnation. It gave me a destination to work towards.
 
       That roadmap worked because it gave my effort a destination.
+      
       If your field doesn’t give you one, build one. Make it your own. Make it holy. It is your shrine; it is your holy grail; and that is the most creative expression one can do.
 
       <strong>4️⃣ The Real Band-Aid</strong>
@@ -142,7 +143,7 @@ export const blogPosts: BlogPost[] = [
       
       But this time, I’m not the big bad wolf who blew your straw house down and left you in ruins.
       
-      I’m the big bad wolf who blew it down, looked at the mess, and — for reasons even I don’t understand — am handing you the bricks, to build something that can't be blown down.
+      I’m the big bad wolf who blew it down, looked at the mess, and — for reasons I don’t even understand — am handing you the bricks and mortar, to build yourself something that can't be blown down.
     `,
     tags: ['focus', 'learning', 'mindset', 'career'],
     excerpt: 'Feeling scattered on LinkedIn? Here’s what to do. (Spoiler alert: you are not going to like this.)',
