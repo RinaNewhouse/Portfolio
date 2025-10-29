@@ -133,7 +133,7 @@ export const blogPosts: BlogPost[] = [
       That roadmap worked because it gave my effort a destination.
       If your field doesn’t give you one, build one. Make it your own. Make it holy. It is your shrine; it is your holy grail; that is the most creative expression one can do.
 
-      <strong>5️4️⃣ Mindset Shift: The Real Band-Aid</strong>
+      <strong>4️⃣ The Real Band-Aid</strong>
 
       The LinkedIn gut punch happens not because someone is "better" than you, but because you realize that you are missing your road map, and finally reclaiming justice for yourself. 
       That band-aid is learning, focus, and structure. It is your <em>own</em> roadmap to success.
