@@ -131,7 +131,7 @@ export const blogPosts: BlogPost[] = [
       4. Direction is the balm to stagnation. It gave me a destination to work towards.
 
       That roadmap worked because it gave my effort a destination.
-      If your field doesn’t give you one, build one. Make it your own. Make it holy. It is your shrine; it is your holy grail; that is the most creative expression one can do.
+      If your field doesn’t give you one, build one. Make it your own. Make it holy. It is your shrine; it is your holy grail; and that is the most creative expression one can do.
 
       <strong>4️⃣ The Real Band-Aid</strong>
 
