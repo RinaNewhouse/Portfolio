@@ -114,7 +114,7 @@ export const blogPosts: BlogPost[] = [
 
       Your portfolio isn’t stor-age; it’s a stor-y. Make one project a month. Post the process, not just the polish. Proof builds momentum. Momentum attracts opportunity. 
       
-      But don't get caught up in other people. They are not you. They are not your path. They are not your journey. They are not your destination. They are not your goal. They are not your dream. They are not your passion. They are not your purpose. They are not your calling. They are not your destiny. They are not your path. They might be a resource; an inspiration; a reminder of what you want to do; but they are not you.
+      But don't get caught up in other people. They are not you. They are not your path. They are not your journey. They are not your destination. They are not your goal. They are not your dream. They are not your passion. They are not your purpose. They are not your calling. They are not your destiny. They might be a resource; an inspiration; a reminder of what you want to do; but they are not you.
 
       <strong>3️⃣ One Example: My Story — The Band-Aid in Action</strong>
 
