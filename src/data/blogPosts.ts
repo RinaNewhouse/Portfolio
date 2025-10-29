@@ -62,13 +62,13 @@ export const blogPosts: BlogPost[] = [
 
       Hodge-podge looks busy. Focus looks professional. If you don't know where to start, just start. This is not going to be hung in an art museum that your employer will view with awe every Sunday afternoon.
 
-      <strong><em>C. Learn Ruthlessly, As Learning Is the Balm to the Soul</strong></em>
+      <strong><em>C. Learn Ruthlessly — For Learning Is the Balm to the Soul</strong></em>
 
       Learning turns the thought, "I can’t" into "I don't yet."
 
-      Treat learning like a job. Schedule it. Track it. (I track my workouts on YouTube comments; I track my frontend development learning on a Google Document) And ask questions. Ask 3 questions a day, 3 different people each time. Strangely enough, Reddit is a fabulous place to ask those questions (there is a subreddit for everything, and there are people smart enough and bored enough who will answer your questions). 
+      Treat learning like a job. Schedule it. Track it. (I track my workouts on YouTube comments; I track my frontend development learning on a Google Document.) And ask questions. Ask 3 questions a day, 3 different people each time. Strangely enough, Reddit is a fabulous place to ask those questions (there is a subreddit for everything, and there are people smart enough and bored enough who will answer your questions). 
       
-      When times get tough, make your schedule work for you. It doesn't matter if you do it for exactly 8 minutes one day, an unplanned hour that turns into 3 the next day, and for 15.4 seconds the next day-it is the fact that it is on-average consistent, focused, and that you are doing it. Again, that is what your tracker is for. Even if you do ZERO minutes one day, that is getting put into your tracker.
+      When times get tough, make your schedule work for you. It doesn't matter if you do it for exactly 8 minutes one day, an unplanned hour that turns into 3 the next day, and for 15.4 seconds the next day—it is the fact that it is on-average consistent, focused, and that you are doing it. Again, that is what your tracker is for. Even if you do ZERO minutes one day, that is getting put into your tracker.
 
       <!-- Focus + 3-Month Plan -->
       <table class="w-full text-left border-collapse my-6">
