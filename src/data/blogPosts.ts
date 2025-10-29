@@ -11,7 +11,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'linkedin-gut-punch',
     title: 'The LinkedIn Gut Punch — and the Only Band-Aid That Actually Works',
-    date: 'October 28, 2025',
+    date: 'October 29, 2025',
     content: `
       Ever scroll through LinkedIn, see someone younger, cooler, and somehow already “thriving,” while your own profile looks like a resume after a level-7-Richter-scale earthquake?
 
