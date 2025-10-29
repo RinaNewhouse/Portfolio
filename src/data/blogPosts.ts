@@ -13,7 +13,7 @@ export const blogPosts: BlogPost[] = [
     title: 'The LinkedIn Gut Punch — and the Only Band-Aid That Actually Works',
     date: 'October 28, 2025',
     content: `
-      Ever scroll through LinkedIn, see someone younger, cooler, and somehow already “thriving,” while your own profile looks like a résumé after a level 7 earthquake?
+      Ever scroll through LinkedIn, see someone younger, cooler, and somehow already “thriving,” while your own profile looks like a resume after a level-7-Richter-scale earthquake?
 
       You turn off your phone. Walk in circles. Eat ten chocolates. Hope it helps. It doesn’t.
 
