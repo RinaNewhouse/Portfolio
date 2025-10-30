@@ -1,9 +1,9 @@
 {
+  "routes": [
+    { "src": "/blog/.*", "dest": "/api/og-blog" }
+  ],
   "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
+    { "source": "/(.*)", "destination": "/index.html" }
   ]
 }
 
