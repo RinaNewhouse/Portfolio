@@ -47,7 +47,7 @@ export const blogPosts: BlogPost[] = [
       <strong>2️⃣ Build Your Focused Path</strong>
       <strong><em>A. Pick a Direction — Just for Now — But ACTUALLY COMMIT TO IT.</strong></em>
 
-      Not forever. Just for 90 days. BUT, if you don't commit to it, how can you get a job? How could you POSSIBLY be successfulif you commit to something, but the second you are met with a challenge, you just give up? Take ten seconds and think about it. Ideally, you would be thinking, "Exactly, that's not how you get a job. That's how you get stuck in a rut. That's how you get stuck in a cycle of frustration and despair. That's how you get stuck in a cycle of not getting what you want." So, humor me: pick a direction and commit to it.
+      Not forever. Just for 90 days. BUT, if you don't commit to it, how can you get a job? How could you POSSIBLY be successful if you commit to something, but the second you are met with a challenge, you just give up? Take ten seconds and think about it. Ideally, you would be thinking, "Exactly, that's not how you get a job. That's how you get stuck in a rut. That's how you get stuck in a cycle of frustration and despair. That's how you get stuck in a cycle of not getting what you want." So, humor me: pick a direction and commit to it.
 
       Three Examples of Directions:
       → “Recruiter.”
