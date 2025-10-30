@@ -16,8 +16,9 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   const url = `${protocol}://${host}${req.url || ''}`;
   const parsed = new URL(url);
 
+  const idParam = parsed.searchParams.get('id');
   const match = parsed.pathname.match(/^\/blog\/(.+)$/);
-  const id = match?.[1] || '';
+  const id = idParam || match?.[1] || '';
 
   const post = blogPosts.find(p => p.id === id);
 
