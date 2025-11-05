@@ -7,11 +7,14 @@ export const skills: Skill[] = [
   { name: 'JavaScript', category: 'frontend' },
   { name: 'TypeScript', category: 'frontend' },
   { name: 'React', category: 'frontend' },
+  { name: 'Next.js', category: 'frontend' },
   { name: 'Tailwind CSS', category: 'frontend' },
+  { name: 'Leaflet', category: 'frontend' },
   { name: 'Responsive Design', category: 'frontend' },
   
   // Backend Skills
   { name: 'Node.js', category: 'backend' },
+  { name: 'Python', category: 'backend' },
   { name: 'Express', category: 'backend' },
   { name: 'REST APIs', category: 'backend' },
   

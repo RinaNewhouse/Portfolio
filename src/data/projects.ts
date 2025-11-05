@@ -40,5 +40,15 @@ export const projects: Project[] = [
     liveUrl: 'https://react-library-black.vercel.app/',
     imageUrl: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1759514232/library_mockup_oct2iz.png',
     featured: true
+  },
+  {
+    id: 'mapme-clone',
+    title: 'Mapme Clone',
+    description: 'Interactive map application clone of Mapme, a platform for creating custom interactive maps with markers and location data. Features hundreds of US schools plotted on an interactive Leaflet map with search functionality and dynamic marker clustering.',
+    technologies: ['React', 'Leaflet', 'Python'],
+    githubUrl: 'https://github.com/RinaNewhouse/Mapme-Clone',
+    liveUrl: 'https://mapme-clone-with-us-schools.vercel.app/',
+    imageUrl: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762373541/mapme_mockup_feasao.png',
+    featured: true
   }
 ];
