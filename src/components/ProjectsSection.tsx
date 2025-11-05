@@ -200,11 +200,18 @@ const ProjectsSection: React.FC = () => {
                 </div>
 
                 {/* Project Image */}
-                <img 
-                  src={selectedProject.imageUrl} 
-                  alt={selectedProject.title}
-                  className="w-full h-64 object-cover rounded-lg mb-6"
-                />
+                <a
+                  href={selectedProject.liveUrl || selectedProject.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block cursor-pointer"
+                >
+                  <img 
+                    src={selectedProject.imageUrl} 
+                    alt={selectedProject.title}
+                    className="w-full h-[400px] object-contain rounded-lg mb-6 hover:opacity-95 transition-opacity duration-300 ease-in-out"
+                  />
+                </a>
               </div>
             </div>
           </div>
