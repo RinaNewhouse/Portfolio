@@ -1,5 +1,4 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { routeMetaTags } from '../src/data/metaTags';
 
 function escapeHtml(input: string): string {
   return input
@@ -15,7 +14,12 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   const protocol = host.includes('localhost') ? 'http' : 'https';
   const canonical = `${protocol}://${host}/projects`;
 
-  const meta = routeMetaTags['/projects'];
+  const meta = {
+    title: 'Projects — Rina Newhouse',
+    description: 'A showcase of my recent work, featuring modern web applications built with cutting-edge technologies.',
+    image: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380474/portfolio-projects_r0fldw.png',
+    url: `https://rinanewhouse.dev/projects`
+  };
 
   const html = `<!doctype html>
 <html lang="en">

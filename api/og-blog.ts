@@ -1,6 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { blogPosts } from '../src/data/blogPosts';
-import { routeMetaTags } from '../src/data/metaTags';
 
 function escapeHtml(input: string): string {
   return input
@@ -32,15 +31,14 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
     const post = blogPosts.find(p => p.id === id);
     title = post ? `${post.title} — Rina Newhouse` : 'Rina Newhouse — Blog';
     description = post?.excerpt || 'Thoughts, notes, and projects from Rina Newhouse.';
-    image = routeMetaTags['/blog'].image;
+    image = 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380473/portfolio-blog_pdmjra.png';
     canonical = `${protocol}://${host}/blog/${id}`;
     ogType = 'article';
   } else {
     // Blog section
-    const meta = routeMetaTags['/blog'];
-    title = meta.title;
-    description = meta.description;
-    image = meta.image;
+    title = 'Blog — Rina Newhouse';
+    description = 'Thoughts, notes, and projects from Rina Newhouse.';
+    image = 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380473/portfolio-blog_pdmjra.png';
     canonical = `${protocol}://${host}/blog`;
     ogType = 'website';
   }
