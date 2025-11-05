@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Moon, Sun } from 'lucide-react';
 
 interface HeaderProps {
@@ -8,6 +9,7 @@ interface HeaderProps {
 const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Check for saved theme preference or default to light mode
@@ -26,6 +28,25 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
     } else {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
+    }
+  };
+
+  const handleNavClick = (path: string, sectionId: string) => {
+    if (window.location.pathname === path) {
+      // If already on this route, just scroll
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const headerHeight = 80;
+        const elementPosition = element.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    } else {
+      // Navigate to new route (scroll will happen in section component)
+      navigate(path);
     }
   };
 
@@ -51,20 +72,28 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
         
         <ul className="hidden md:flex items-center space-x-8">
           <li>
-            <a 
-              href="#projects"
+            <Link 
+              to="/projects"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('/projects', 'projects');
+              }}
               className="text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium"
             >
               Projects
-            </a>
+            </Link>
           </li>
           <li>
-            <a 
-              href="#blog"
+            <Link 
+              to="/blog"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('/blog', 'blog');
+              }}
               className="text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium"
             >
               Blog
-            </a>
+            </Link>
           </li>
           <li>
             <button 
@@ -105,20 +134,28 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 shadow-lg">
           <div className="container mx-auto px-6 py-4 space-y-4">
-            <a 
-              href="#projects"
-              onClick={() => setIsMobileMenuOpen(false)}
+            <Link 
+              to="/projects"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('/projects', 'projects');
+                setIsMobileMenuOpen(false);
+              }}
               className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2"
             >
               Projects
-            </a>
-            <a 
-              href="#blog"
-              onClick={() => setIsMobileMenuOpen(false)}
+            </Link>
+            <Link 
+              to="/blog"
+              onClick={(e) => {
+                e.preventDefault();
+                handleNavClick('/blog', 'blog');
+                setIsMobileMenuOpen(false);
+              }}
               className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2"
             >
               Blog
-            </a>
+            </Link>
             <button 
               onClick={() => handleMobileMenuClick(onContactClick)}
               className="block w-full text-left text-gray-700 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-colors duration-200 font-medium py-2"

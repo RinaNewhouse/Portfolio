@@ -1,13 +1,32 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { BlogPost, blogPosts } from '../data/blogPosts';
 
 const BlogSection: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { id: postId } = useParams();
   const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [selectedTag, setSelectedTag] = useState<string>('all');
   const [postsToShow, setPostsToShow] = useState<number>(6); // Start with 6 posts
+
+  // Scroll to section when route is /blog
+  useEffect(() => {
+    if (location.pathname === '/blog' && !postId) {
+      setTimeout(() => {
+        const element = document.getElementById('blog');
+        if (element) {
+          const headerHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, [location.pathname, postId]);
 
   // Handle URL-based modal opening
   useEffect(() => {

@@ -7,10 +7,12 @@ import ProjectsSection from './components/ProjectsSection';
 import BlogSection from './components/BlogSection';
 import Modal from './components/Modal';
 import Footer from './components/Footer';
+import useMetaTags from './hooks/useMetaTags';
 
 function AppContent() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
+  useMetaTags(); // Update meta tags based on route
 
   const handleContactClick = () => {
     setIsModalOpen(true);
@@ -36,8 +38,24 @@ function AppContent() {
             <BlogSection />
           </>} />
           
+          {/* Projects section */}
+          <Route path="/projects" element={<>
+            <Hero onContactClick={handleContactClick} />
+            <SkillsSection />
+            <ProjectsSection />
+            <BlogSection />
+          </>} />
+          
           {/* Individual project routes */}
           <Route path="/projects/:id" element={<>
+            <Hero onContactClick={handleContactClick} />
+            <SkillsSection />
+            <ProjectsSection />
+            <BlogSection />
+          </>} />
+          
+          {/* Blog section */}
+          <Route path="/blog" element={<>
             <Hero onContactClick={handleContactClick} />
             <SkillsSection />
             <ProjectsSection />

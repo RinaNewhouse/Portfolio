@@ -1,12 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams, useLocation } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { Github, ExternalLink, Star } from 'lucide-react';
 
 const ProjectsSection: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
   const { id: projectId } = useParams();
   const [selectedProject, setSelectedProject] = useState(projects.find(p => p.id === projectId) || null);
+
+  // Scroll to section when route is /projects
+  useEffect(() => {
+    if (location.pathname === '/projects' && !projectId) {
+      setTimeout(() => {
+        const element = document.getElementById('projects');
+        if (element) {
+          const headerHeight = 80;
+          const elementPosition = element.getBoundingClientRect().top;
+          const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  }, [location.pathname, projectId]);
 
   // Handle URL-based modal opening
   useEffect(() => {
