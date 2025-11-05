@@ -1,15 +1,20 @@
 {
-  "routes": [
-    {
-      "src": "/blog/(.*)",
-      "has": [
-        { "type": "header", "key": "user-agent", "value": "(Twitterbot|Slackbot|facebookexternalhit|WhatsApp|Discordbot|TelegramBot|Applebot|LinkedInBot)" }
-      ],
-      "dest": "/api/og-blog?id=$1"
-    }
-  ],
   "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
+    {
+      "source": "/blog/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(Twitterbot|Slackbot|facebookexternalhit|WhatsApp|Discordbot|TelegramBot|Applebot|LinkedInBot)"
+        }
+      ],
+      "destination": "/api/og-blog?id=$1"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
   ]
 }
 
