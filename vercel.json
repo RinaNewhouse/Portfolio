@@ -1,6 +1,28 @@
 {
   "rewrites": [
     {
+      "source": "/projects",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(Twitterbot|Slackbot|facebookexternalhit|WhatsApp|Discordbot|TelegramBot|Applebot|LinkedInBot)"
+        }
+      ],
+      "destination": "/api/og-projects"
+    },
+    {
+      "source": "/blog",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(Twitterbot|Slackbot|facebookexternalhit|WhatsApp|Discordbot|TelegramBot|Applebot|LinkedInBot)"
+        }
+      ],
+      "destination": "/api/og-blog"
+    },
+    {
       "source": "/blog/(.*)",
       "has": [
         {
@@ -10,6 +32,17 @@
         }
       ],
       "destination": "/api/og-blog?id=$1"
+    },
+    {
+      "source": "/projects/(.*)",
+      "has": [
+        {
+          "type": "header",
+          "key": "user-agent",
+          "value": "(Twitterbot|Slackbot|facebookexternalhit|WhatsApp|Discordbot|TelegramBot|Applebot|LinkedInBot)"
+        }
+      ],
+      "destination": "/api/og-project?id=$1"
     },
     {
       "source": "/(.*)",

@@ -1,6 +1,5 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { blogPosts } from '../src/data/blogPosts';
-import { routeMetaTags } from '../src/data/metaTags';
+import { projects } from '../src/data/projects';
 
 function escapeHtml(input: string): string {
   return input
@@ -18,32 +17,15 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
   const parsed = new URL(url);
 
   const idParam = parsed.searchParams.get('id');
-  const match = parsed.pathname.match(/^\/blog\/(.+)$/);
+  const match = parsed.pathname.match(/^\/projects\/(.+)$/);
   const id = idParam || match?.[1] || '';
 
-  let title: string;
-  let description: string;
-  let image: string;
-  let canonical: string;
-  let ogType: string;
+  const project = projects.find(p => p.id === id);
 
-  if (id) {
-    // Individual blog post
-    const post = blogPosts.find(p => p.id === id);
-    title = post ? `${post.title} — Rina Newhouse` : 'Rina Newhouse — Blog';
-    description = post?.excerpt || 'Thoughts, notes, and projects from Rina Newhouse.';
-    image = routeMetaTags['/blog'].image;
-    canonical = `${protocol}://${host}/blog/${id}`;
-    ogType = 'article';
-  } else {
-    // Blog section
-    const meta = routeMetaTags['/blog'];
-    title = meta.title;
-    description = meta.description;
-    image = meta.image;
-    canonical = `${protocol}://${host}/blog`;
-    ogType = 'website';
-  }
+  const title = project ? `${project.title} — Rina Newhouse` : 'Projects — Rina Newhouse';
+  const description = project?.description || 'A showcase of my recent work, featuring modern web applications built with cutting-edge technologies.';
+  const image = project?.imageUrl || 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380474/portfolio-projects_r0fldw.png';
+  const canonical = `${protocol}://${host}${project ? `/projects/${project.id}` : '/projects'}`;
 
   const html = `<!doctype html>
 <html lang="en">
@@ -55,7 +37,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
 
     <meta property="og:title" content="${escapeHtml(title)}" />
     <meta property="og:description" content="${escapeHtml(description)}" />
-    <meta property="og:type" content="${ogType}" />
+    <meta property="og:type" content="website" />
     <meta property="og:url" content="${escapeHtml(canonical)}" />
     <meta property="og:image" content="${escapeHtml(image)}" />
 
@@ -74,5 +56,4 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
 
   res.status(200).setHeader('Content-Type', 'text/html; charset=utf-8').send(html);
 }
-
 
