@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from "@vercel/analytics/next";
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
 import Hero from './components/Hero';
@@ -70,6 +71,7 @@ function AppContent() {
             <BlogSection />
           </>} />
         </Routes>
+        <Analytics />
       </main>
       
       <Footer onContactClick={handleContactClick} />
