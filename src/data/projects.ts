@@ -34,7 +34,7 @@ export const projects: Project[] = [
   {
     id: 'nft-commerce',
     title: 'NFT E-Commerce',
-    description: 'Professional NFT marketplace mockup featuring clean UI design, product browsing, and responsive layouts.',
+    description: 'NFT marketplace prototype featuring responsive UI, dynamic asset browsing, API-driven data, and integrated Clerk authentication for secure user access.',
     technologies: ['Next.js', 'Tailwind CSS', 'React', 'Clerk'],
     githubUrl: 'https://github.com/RinaNewhouse/rina-internship-nft-sample',
     liveUrl: 'https://nft-store-delta.vercel.app/',
