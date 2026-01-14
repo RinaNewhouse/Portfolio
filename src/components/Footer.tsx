@@ -72,7 +72,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
 
           {/* Copyright */}
           <div className="text-center md:text-right text-gray-400">
-            <p>Copyright © 2025 Rina Newhouse</p>
+            <p>Copyright © 2026 Rina Newhouse</p>
             <p className="text-sm mt-1">Built with React, TypeScript & Tailwind CSS</p>
           </div>
         </div>
