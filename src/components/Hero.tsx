@@ -51,7 +51,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
                 <Github className="h-6 w-6 text-pink-500" />
               </a>
               <a 
-                href="/Rina-Newhouse-Resume.pdf" 
+                href="/Rina-Newhouse-Resume.pdf?v=2" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"

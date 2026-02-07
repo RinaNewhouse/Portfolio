@@ -60,7 +60,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
               <span>Contact</span>
             </button>
             <a 
-              href="/Rina-Newhouse-Resume.pdf"
+              href="/Rina-Newhouse-Resume.pdf?v=2"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-pink-400 transition-colors duration-200 flex items-center space-x-2"
