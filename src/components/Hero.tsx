@@ -18,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ onContactClick }) => {
 
       <div className="container mx-auto px-6 py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Left side text content */}
+          {/* Left side - Text content */}
           <div className="text-center lg:text-left">
             <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6">
               Hey
