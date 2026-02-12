@@ -12,6 +12,16 @@ export const projects: Project[] = [
     featured: true
   },
   {
+    id: 'repliable',
+    title: 'Repliable',
+    description: 'AI-powered workplace communication assistant that analyzes messages and generates contextual response suggestions. Features AES-256-GCM encryption for sensitive data, user communication style profiling, and Claude AI integration for nuanced relationship dynamic analysis. Includes compose mode for initiating difficult conversations and tone customization based on recipient communication patterns.',
+    technologies: ['Next.js', 'TypeScript', 'React', 'Tailwind CSS', 'PostgreSQL', 'Prisma', 'Claude AI', 'Clerk'],
+    githubUrl: 'https://github.com/RinaNewhouse/repliable',
+    liveUrl: 'https://repliable.ai/',
+    imageUrl: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1770860469/Repliable_Landing_Page_pscg9x.png',
+    featured: true
+  },
+  {
     id: 'dream-finder',
     title: 'Dream Finder',
     description: 'Movie recommendation platform featuring external API integration, dynamic search, responsive design, and user-friendly interface.',
