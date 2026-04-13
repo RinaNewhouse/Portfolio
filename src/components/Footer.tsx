@@ -10,6 +10,8 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="bg-gray-900 dark:bg-black text-white py-12">
       <div className="container mx-auto px-6">
@@ -72,7 +74,7 @@ const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
 
           {/* Copyright */}
           <div className="text-center md:text-right text-gray-400">
-            <p>Copyright © 2026 Rina Newhouse</p>
+            <p>Copyright © {currentYear} Rina Newhouse</p>
             <p className="text-sm mt-1">Built with React, TypeScript & Tailwind CSS</p>
           </div>
         </div>
