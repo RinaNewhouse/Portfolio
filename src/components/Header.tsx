@@ -12,7 +12,8 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check for saved theme preference or default to light mode
+    if (typeof window === 'undefined') return;
+    
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       setIsDarkMode(true);
@@ -21,6 +22,8 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   }, []);
 
   const toggleTheme = () => {
+    if (typeof window === 'undefined') return;
+    
     setIsDarkMode(!isDarkMode);
     if (isDarkMode) {
       document.documentElement.classList.remove('dark');
@@ -32,8 +35,9 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
   };
 
   const handleNavClick = (path: string, sectionId: string) => {
+    if (typeof window === 'undefined') return;
+    
     if (window.location.pathname === path) {
-      // If already on this route, just scroll
       const element = document.getElementById(sectionId);
       if (element) {
         const headerHeight = 80;
@@ -45,7 +49,6 @@ const Header: React.FC<HeaderProps> = ({ onContactClick }) => {
         });
       }
     } else {
-      // Navigate to new route (scroll will happen in section component)
       navigate(path);
     }
   };

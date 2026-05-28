@@ -9,8 +9,9 @@ const ProjectsSection: React.FC = () => {
   const { id: projectId } = useParams();
   const [selectedProject, setSelectedProject] = useState(projects.find(p => p.id === projectId) || null);
 
-  // Scroll to section when route is /projects
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     if (location.pathname === '/projects' && !projectId) {
       setTimeout(() => {
         const element = document.getElementById('projects');

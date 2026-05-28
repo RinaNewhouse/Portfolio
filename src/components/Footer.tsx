@@ -7,7 +7,9 @@ interface FooterProps {
 
 const Footer: React.FC<FooterProps> = ({ onContactClick }) => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
   };
 
   const currentYear = new Date().getFullYear();
