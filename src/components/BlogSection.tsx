@@ -10,8 +10,9 @@ const BlogSection: React.FC = () => {
   const [selectedTag, setSelectedTag] = useState<string>('all');
   const [postsToShow, setPostsToShow] = useState<number>(6); // Start with 6 posts
 
-  // Scroll to section when route is /blog
   useEffect(() => {
+    if (typeof window === 'undefined') return;
+    
     if (location.pathname === '/blog' && !postId) {
       setTimeout(() => {
         const element = document.getElementById('blog');
