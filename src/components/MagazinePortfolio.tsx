@@ -244,7 +244,7 @@ export default function MagazinePortfolio() {
           <button onClick={() => goToSection('writing')}>WRITING</button>
         </div>
         <div className="title">
-          <em>The</em> Newhouse
+          The <em>Newhouse</em> Tribune
         </div>
         <div className="masthead-right">
           <button onClick={() => goToSection('contact')}>CONTACT</button>
