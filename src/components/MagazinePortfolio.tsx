@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState, type FormEvent } from 'react';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
 import { Analytics } from '@vercel/analytics/react';
-import { blogPosts, BlogPost } from '../data/blogPosts';
+import { blogPosts } from '../data/blogPosts';
 import { projects } from '../data/projects';
 import { skills } from '../data/skills';
 import useMetaTags from '../hooks/useMetaTags';
@@ -129,12 +129,6 @@ export default function MagazinePortfolio() {
 
   const selectedProject = useMemo(
     () => (location.pathname.startsWith('/projects/') ? projects.find((p) => p.id === id) : null),
-    [id, location.pathname],
-  );
-
-  const selectedPost = useMemo(
-    (): BlogPost | null =>
-      location.pathname.startsWith('/blog/') ? blogPosts.find((p) => p.id === id) ?? null : null,
     [id, location.pathname],
   );
 
@@ -728,19 +722,6 @@ export default function MagazinePortfolio() {
                 Code
               </a>
             </div>
-          </div>
-        </div>
-      )}
-
-      {selectedPost && (
-        <div className="overlay" onClick={closeOverlays}>
-          <div className="overlay-card post-card" onClick={(event) => event.stopPropagation()}>
-            <button className="close-btn" onClick={closeOverlays}>
-              ×
-            </button>
-            <p className="post-date">{selectedPost.date}</p>
-            <h3>{selectedPost.title}</h3>
-            <div className="post-body" dangerouslySetInnerHTML={{ __html: selectedPost.content }} />
           </div>
         </div>
       )}

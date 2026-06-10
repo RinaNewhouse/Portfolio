@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import BlogReader from './components/BlogReader';
 import MagazinePortfolio from './components/MagazinePortfolio';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
         <Route path="/projects" element={<MagazinePortfolio />} />
         <Route path="/projects/:id" element={<MagazinePortfolio />} />
         <Route path="/blog" element={<MagazinePortfolio />} />
-        <Route path="/blog/:id" element={<MagazinePortfolio />} />
+        <Route path="/blog/:id" element={<BlogReader />} />
       </Routes>
     </BrowserRouter>
   );
