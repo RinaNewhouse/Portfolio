@@ -126,6 +126,7 @@ export default function MagazinePortfolio() {
   const [isSending, setIsSending] = useState(false);
   const [didSend, setDidSend] = useState(false);
   const [isContactOpen, setIsContactOpen] = useState(false);
+  const [isPostExpanded, setIsPostExpanded] = useState(false);
 
   const selectedProject = useMemo(
     () => (location.pathname.startsWith('/projects/') ? projects.find((p) => p.id === id) : null),
@@ -190,7 +191,10 @@ export default function MagazinePortfolio() {
   const dataSkills = ['PostgreSQL', 'Prisma', 'Clerk', 'Stripe'];
   const toolSkills = skills.filter((skill) => skill.category === 'tools');
 
-  const closeOverlays = () => navigate('/');
+  const closeOverlays = () => {
+    setIsPostExpanded(false);
+    navigate('/');
+  };
 
   const goToSection = (sectionId: string, route = '/') => {
     if (location.pathname !== route) {
@@ -733,11 +737,27 @@ export default function MagazinePortfolio() {
       )}
 
       {selectedPost && (
-        <div className="overlay" onClick={closeOverlays}>
-          <div className="overlay-card post-card" onClick={(event) => event.stopPropagation()}>
-            <button className="close-btn" onClick={closeOverlays}>
-              ×
-            </button>
+        <div
+          className={`overlay ${isPostExpanded ? 'overlay-expanded' : ''}`}
+          onClick={closeOverlays}
+        >
+          <div
+            className={`overlay-card post-card ${isPostExpanded ? 'expanded' : ''}`}
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="overlay-actions">
+              <button
+                type="button"
+                className="expand-btn"
+                onClick={() => setIsPostExpanded((prev) => !prev)}
+                aria-label={isPostExpanded ? 'Exit full screen' : 'Expand to full screen'}
+              >
+                {isPostExpanded ? '⊟' : '⊞'}
+              </button>
+              <button type="button" className="close-btn" onClick={closeOverlays}>
+                ×
+              </button>
+            </div>
             <p className="post-date">{selectedPost.date}</p>
             <h3>{selectedPost.title}</h3>
             <div className="post-body" dangerouslySetInnerHTML={{ __html: selectedPost.content }} />
