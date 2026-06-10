@@ -7,12 +7,15 @@ export interface MetaTagConfig {
 
 const baseUrl = 'https://rinanewhouse.dev';
 
+export const homepageThumbnail =
+  'https://res.cloudinary.com/dcsbgpsck/image/upload/v1781104421/Thumbnail_gs3g2k.png';
+
 // Main route meta tags
 export const routeMetaTags: Record<string, MetaTagConfig> = {
   '/': {
     title: 'Rina Newhouse — E‑Portfolio',
     description: 'Frontend & fullstack projects, blog posts, and ways to connect.',
-    image: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380475/portfolio-thumbnail_nlybxm.png',
+    image: homepageThumbnail,
     url: baseUrl
   },
   '/projects': {
@@ -33,7 +36,7 @@ export const routeMetaTags: Record<string, MetaTagConfig> = {
 export const defaultMetaTags: MetaTagConfig = {
   title: 'Rina Newhouse — E‑Portfolio',
   description: 'Frontend & fullstack projects, blog posts, and ways to connect.',
-  image: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380475/portfolio-thumbnail_nlybxm.png',
+  image: homepageThumbnail,
   url: baseUrl
 };
 
