@@ -57,7 +57,7 @@ const projectDisplayOverrides = [
       'Full-stack production website for the Johns Hopkins Hillel — custom API endpoints, an event management system, dynamic content loading, and a fully responsive frontend running on a Jewish life center that hosts hundreds of students.',
     tech: ['React', 'JavaScript', 'HTML', 'CSS', 'REST API'],
     liveLabel: 'Live site',
-    showDetails: false,
+    showDetails: true,
     browserUrl: 'hopkinshillel.org',
   },
   {
@@ -66,7 +66,7 @@ const projectDisplayOverrides = [
       'AI-powered workplace communication assistant. Analyzes messages and generates contextual response suggestions — AES-256-GCM encryption, user style profiling, Claude integration for nuanced relationship analysis.',
     tech: ['Next.js', 'TypeScript', 'Tailwind', 'Postgres', 'Prisma', 'Claude AI', 'Clerk'],
     liveLabel: 'Live demo',
-    showDetails: false,
+    showDetails: true,
     browserUrl: 'repliable.app',
   },
   {
@@ -75,7 +75,7 @@ const projectDisplayOverrides = [
       'Movie recommendation platform with external TMDB API integration, dynamic search, responsive design, and a user-friendly interface — built without a framework on purpose.',
     tech: ['HTML', 'CSS', 'JavaScript', 'TMDB API'],
     liveLabel: 'Live demo',
-    showDetails: false,
+    showDetails: true,
     browserUrl: 'dreamfinder.app',
   },
   {
@@ -84,7 +84,7 @@ const projectDisplayOverrides = [
       'Interactive map app — hundreds of US schools on Leaflet with search and marker clustering.',
     tech: ['React', 'Leaflet', 'Python'],
     liveLabel: 'Demo',
-    showDetails: false,
+    showDetails: true,
     browserUrl: 'mapme-clone.vercel.app',
   },
   {
@@ -93,7 +93,7 @@ const projectDisplayOverrides = [
       'NFT marketplace prototype — responsive UI, dynamic asset browsing, API-driven data, Clerk auth.',
     tech: ['Next.js', 'Tailwind', 'Clerk'],
     liveLabel: 'Demo',
-    showDetails: false,
+    showDetails: true,
     browserUrl: 'nftshop.demo',
   },
   {
@@ -102,7 +102,7 @@ const projectDisplayOverrides = [
       'Digital library platform built with React — component architecture, state management, Stripe checkout.',
     tech: ['React', 'Stripe'],
     liveLabel: 'Demo',
-    showDetails: false,
+    showDetails: true,
     browserUrl: 'openshelf.app',
   },
 ] as const;
@@ -131,6 +131,12 @@ export default function MagazinePortfolio() {
     () => (location.pathname.startsWith('/projects/') ? projects.find((p) => p.id === id) : null),
     [id, location.pathname],
   );
+
+  const selectedProjectDisplay = useMemo(() => {
+    if (!selectedProject) return null;
+    const index = projects.findIndex((project) => project.id === selectedProject.id);
+    return projectDisplayOverrides[index >= 0 ? index : 0];
+  }, [selectedProject]);
 
   const selectedPost = useMemo(
     (): BlogPost | null =>
@@ -709,19 +715,24 @@ export default function MagazinePortfolio() {
         </div>
       )}
 
-      {selectedProject && (
+      {selectedProject && selectedProjectDisplay && (
         <div className="overlay" onClick={closeOverlays}>
-          <div className="overlay-card" onClick={(event) => event.stopPropagation()}>
+          <div className="overlay-card project-detail-card" onClick={(event) => event.stopPropagation()}>
             <button className="close-btn" onClick={closeOverlays}>
               ×
             </button>
+            <span className="project-detail-badge">{selectedProjectDisplay.badge}</span>
             <h3>{selectedProject.title}</h3>
-            <p>{selectedProject.description}</p>
-            <img src={selectedProject.imageUrl} alt={selectedProject.title} />
+            <p className="project-detail-desc">{selectedProjectDisplay.description}</p>
+            <div className="project-detail-stack">
+              {selectedProjectDisplay.tech.map((tech) => (
+                <span key={`${selectedProject.id}-detail-${tech}`}>{tech}</span>
+              ))}
+            </div>
             <div className="project-links">
               {selectedProject.liveUrl && (
                 <a className="btn primary" href={selectedProject.liveUrl} target="_blank" rel="noreferrer">
-                  Live demo ↗
+                  {selectedProjectDisplay.liveLabel} <span className="arrow">↗</span>
                 </a>
               )}
               <a className="btn" href={selectedProject.githubUrl} target="_blank" rel="noreferrer">
