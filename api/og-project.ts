@@ -1,5 +1,6 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
 import { projects } from '../src/data/projects';
+import { projectsThumbnail } from '../src/data/metaTags';
 
 function escapeHtml(input: string): string {
   return input
@@ -24,7 +25,7 @@ export default function handler(req: VercelRequest, res: VercelResponse) {
 
   const title = project ? `${project.title} — Rina Newhouse` : 'Projects — Rina Newhouse';
   const description = project?.description || 'A showcase of my recent work, featuring modern web applications built with cutting-edge technologies.';
-  const image = project?.imageUrl || 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380474/portfolio-projects_r0fldw.png';
+  const image = projectsThumbnail;
   const canonical = `${protocol}://${host}${project ? `/projects/${project.id}` : '/projects'}`;
 
   const html = `<!doctype html>

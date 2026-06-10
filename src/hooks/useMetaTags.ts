@@ -64,7 +64,7 @@ function useMetaTags() {
       meta = post ? getBlogPostMeta(post.id, post.title, post.excerpt) : defaultMetaTags;
     } else if (location.pathname.startsWith('/projects/') && id) {
       const project = projects.find(p => p.id === id);
-      meta = project ? getProjectMeta(project.id, project.title, project.description, project.imageUrl) : defaultMetaTags;
+      meta = project ? getProjectMeta(project.id, project.title, project.description) : defaultMetaTags;
     } else {
       meta = routeMetaTags[location.pathname] || defaultMetaTags;
     }

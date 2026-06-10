@@ -10,6 +10,10 @@ const baseUrl = 'https://rinanewhouse.dev';
 export const homepageThumbnail =
   'https://res.cloudinary.com/dcsbgpsck/image/upload/v1781104421/Thumbnail_gs3g2k.png';
 
+// Branded share images — replace with section-specific cards when available.
+export const projectsThumbnail = homepageThumbnail;
+export const blogThumbnail = homepageThumbnail;
+
 // Main route meta tags
 export const routeMetaTags: Record<string, MetaTagConfig> = {
   '/': {
@@ -21,13 +25,13 @@ export const routeMetaTags: Record<string, MetaTagConfig> = {
   '/projects': {
     title: 'Projects — Rina Newhouse',
     description: 'A showcase of my recent work, featuring modern web applications built with cutting-edge technologies.',
-    image: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380474/portfolio-projects_r0fldw.png',
+    image: projectsThumbnail,
     url: `${baseUrl}/projects`
   },
   '/blog': {
     title: 'Blog — Rina Newhouse',
     description: 'Thoughts, notes, and projects from Rina Newhouse.',
-    image: 'https://res.cloudinary.com/dcsbgpsck/image/upload/v1762380473/portfolio-blog_pdmjra.png',
+    image: blogThumbnail,
     url: `${baseUrl}/blog`
   }
 };
@@ -41,17 +45,17 @@ export const defaultMetaTags: MetaTagConfig = {
 };
 
 // Helper functions to get meta tags for dynamic routes
-export const getProjectMeta = (projectId: string, projectTitle: string, description: string, imageUrl: string): MetaTagConfig => ({
+export const getProjectMeta = (projectId: string, projectTitle: string, description: string): MetaTagConfig => ({
     title: `${projectTitle} — Rina Newhouse`,
     description: description,
-    image: imageUrl,
+    image: projectsThumbnail,
     url: `${baseUrl}/projects/${projectId}`
 });
 
 export const getBlogPostMeta = (postId: string, postTitle: string, excerpt: string): MetaTagConfig => ({
   title: `${postTitle} — Rina Newhouse`,
   description: excerpt,
-  image: routeMetaTags['/blog'].image,
+  image: blogThumbnail,
   url: `${baseUrl}/blog/${postId}`
 });
 
