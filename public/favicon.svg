@@ -1,7 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&amp;display=swap');
+      @font-face {
+        font-family: 'Instrument Serif';
+        font-style: italic;
+        font-weight: 400;
+        src: url('fonts/InstrumentSerif-Italic.ttf') format('truetype');
+      }
       .mark {
         font-family: 'Instrument Serif', Georgia, serif;
         font-size: 40px;
@@ -15,7 +20,7 @@
   <!-- Cream circle, centered -->
   <circle cx="32" cy="32" r="28" fill="#EFEAE0" />
 
-  <!-- R centered on the circle (slight up-left nudge for period weight) -->
+  <!-- R centered on the circle -->
   <text class="mark" x="32" y="32" text-anchor="middle" dominant-baseline="central">R</text>
 
   <!-- Period straddling bottom-right edge -->
