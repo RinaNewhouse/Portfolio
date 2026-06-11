@@ -9,6 +9,118 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'portfolio-newspaper-redesign',
+    title: 'I Turned My Portfolio Into a Newspaper',
+    date: 'June 10, 2026',
+    content: `
+      For a long time, my portfolio looked like every other developer portfolio on the internet: soft gradient, hero section, “Hey I’m Rina,” a round photo, a pink button, fin.
+
+      It was fine. It worked. But every time I opened it, I had the distinct feeling that I was looking at a template with my name dropped in — not a point of view.
+
+      So I rebuilt the whole thing as a newspaper.
+
+      <strong>Why a newspaper?</strong>
+
+      I’ve always liked editorial design — mastheads, section bars, pull quotes, the sense that someone <em>laid this out on purpose.</em> Software engineering is creative work. I wanted a site that felt like that: structured, confident, a little dramatic, but still readable.
+
+      The new version is called <strong>The Newhouse Tribune</strong>. Vol. 02, Iss. 26. Baltimore in the dateline. A ticker at the bottom. Project cards that look like feature stories instead of SaaS landing pages.
+
+      <strong>What actually changed</strong>
+
+      → <strong>The layout.</strong> Instead of one long scroll of identical cards, the page is organized like sections of a paper: Cover Story (hero), Toolkit (skills), Portfolio (projects), Field Notes (blog), Colophon (contact).
+
+      → <strong>The typography.</strong> Instrument Serif for headlines. Manrope for body. DM Mono for labels and metadata. It sounds like a small thing. It is not a small thing. Type is most of what you’re looking at.
+
+      → <strong>The project cards.</strong> Each one has a badge (Featured · Production, Side project, Clone, etc.), a short description written for humans, tech chips, and illustrated canvases instead of lazy screenshots dropped into a rectangle.
+
+      → <strong>The hero.</strong> My headshot is framed like a figure in a magazine layout — FIG. 01, RN / SELF — because I thought that was funny and also true.
+
+      <strong>What broke along the way</strong>
+
+      Redesigning the live site is one job. Making the rest of the internet <em>see</em> the redesign is another.
+
+      When I shared the link on LinkedIn, the preview still showed my old pink-gradient hero. iMessage did the same thing. The site had changed. The thumbnail had not. (I wrote a whole separate field note about that — it became its own rabbit hole.)
+
+      I also had to fix blog post spacing in the modal. Turns out if you store posts as plain text with line breaks and forget <code>white-space: pre-line</code>, everything collapses into one impenetrable wall of words. Very newspaper-unfriendly.
+
+      <strong>What I’d tell past-me</strong>
+
+      1. <strong>Start from a point of view, not a component library.</strong> The old site was competent. The new one has an opinion.
+
+      2. <strong>Match your share images to your live design.</strong> Crawlers don’t run your React app. They read static meta tags and a PNG you uploaded six months ago. Update both.
+
+      3. <strong>Editorial layout is still UX.</strong> Hierarchy, whitespace, labels, section breaks — all of that helps people actually read your work.
+
+      I’m not saying everyone should make their portfolio look like a newspaper. I’m saying yours should look like it came from <em>you</em>.
+
+      Vol. 02 is live. Chicago soon. More field notes to come.
+    `,
+    tags: ['portfolio', 'design', 'frontend', 'redesign'],
+    excerpt:
+      'Why I rebuilt rinanewhouse.dev as The Newhouse Tribune — and what broke when the rest of the internet didn’t get the memo.',
+  },
+  {
+    id: 'metadata-rabbit-hole',
+    title: 'The Metadata Rabbit Hole (Or: Why My Site Lied on LinkedIn)',
+    date: 'June 6, 2026',
+    content: `
+      I spent weeks redesigning my portfolio. Magazine layout. New typography. New headshot. New everything.
+
+      Then I pasted the link into LinkedIn Post Inspector and saw… my old site.
+
+      Pink gradient. “Hey I’m Rina.” A version of me I had already retired. iMessage did the same thing. My portfolio was telling two different stories depending on whether you clicked through or just glanced at the preview.
+
+      Welcome to the metadata rabbit hole. I lived here for a few days. You can visit, but bring snacks.
+
+      <strong>Link previews are not screenshots</strong>
+
+      This was the big misunderstanding. When LinkedIn or iMessage or Slack shows a thumbnail, it is not loading your site and taking a picture. It is reading your HTML — specifically <code>og:image</code>, <code>og:title</code>, and <code>og:description</code> — and fetching a static image URL you pointed at months ago.
+
+      My React app could be a masterpiece. The crawlers never saw it. They saw a shell in <code>index.html</code> and a Cloudinary PNG from the old design era.
+
+      <strong>Two systems, one URL</strong>
+
+      My site actually has two layers of metadata:
+
+      → <strong>Static tags in index.html</strong> — what most bots read on first fetch.
+
+      → <strong>Client-side updates via a React hook</strong> — what changes when you navigate inside the app. Great for browsers. Useless for LinkedIn, which does not sit around executing your JavaScript.
+
+      I also had Vercel rewrites that serve special HTML to certain bots on <code>/projects</code> and <code>/blog</code> routes. Clever! But the homepage — the link people actually share most — just served the old thumbnail.
+
+      <strong>What looked “funky” and why</strong>
+
+      → <strong>Homepage vs. project links.</strong> Some URLs showed app mockup screenshots cropped into weird rectangles. Others showed a completely different branded card. None of them matched the new newspaper design.
+
+      → <strong>Twitter vs. LinkedIn.</strong> My homepage had two different image URLs — one for Open Graph, one for Twitter. Same link, different previews depending on the platform.
+
+      → <strong>Blog posts.</strong> Every post shared the same generic blog thumbnail. Fine for consistency, confusing if you expected the title to match the image.
+
+      → <strong>Stale cache.</strong> Even after you fix the tags, platforms cache previews aggressively. LinkedIn Post Inspector exists for a reason. Use it. Cry. Use it again.
+
+      <strong>What I did about it</strong>
+
+      1. Designed a new 1200×630 share image that matches the magazine redesign — masthead, hero, paper texture, the works.
+
+      2. Updated <code>index.html</code>, <code>metaTags.ts</code>, and the Vercel OG handler files to point at the new asset.
+
+      3. Stopped using per-project screenshot URLs as social preview images. Titles and descriptions carry the specifics; the thumbnail carries the brand.
+
+      4. Re-scraped everything and sent the link in a fresh iMessage thread like a person who has learned things the hard way.
+
+      <strong>The takeaway</strong>
+
+      If your portfolio redesign looks perfect in the browser but wrong when you share it, you don’t have a design problem. You have a metadata problem.
+
+      And metadata is boring until it embarrasses you in front of a recruiter.
+
+      Fix the tags. Fix the image. Scrape again. Then go write about it so you look like you have something recent. (Hi. This is that post.)
+    `,
+    tags: ['metadata', 'og-images', 'deployment', 'portfolio'],
+    excerpt:
+      'My portfolio redesign looked great in the browser and wrong on LinkedIn. Here’s what og:image actually does — and how I fixed it.',
+  },
+  {
     id: 'linkedin-gut-punch',
     title: 'The LinkedIn Gut Punch — and the Only Band-Aid That Actually Works',
     date: 'October 29, 2025',
