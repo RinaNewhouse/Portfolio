@@ -139,18 +139,21 @@ export default function MagazinePortfolio() {
   );
 
   useEffect(() => {
+    const formatter = new Intl.DateTimeFormat('en-US', {
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true,
+      timeZone: 'America/New_York',
+      timeZoneName: 'short',
+    });
+
     const updateClock = () => {
-      const value = new Date().toLocaleTimeString('en-US', {
-        hour: '2-digit',
-        minute: '2-digit',
-        hour12: false,
-        timeZone: 'America/New_York',
-      });
-      setClock(`${value} EST`);
+      setClock(formatter.format(new Date()));
     };
 
     updateClock();
-    const interval = window.setInterval(updateClock, 30_000);
+    const interval = window.setInterval(updateClock, 1000);
     return () => window.clearInterval(interval);
   }, []);
 
