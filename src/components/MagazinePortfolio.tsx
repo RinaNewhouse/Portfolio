@@ -140,10 +140,10 @@ export default function MagazinePortfolio() {
 
   useEffect(() => {
     const formatter = new Intl.DateTimeFormat('en-US', {
-      hour: 'numeric',
+      hour: '2-digit',
       minute: '2-digit',
       second: '2-digit',
-      hour12: true,
+      hour12: false,
       timeZone: 'America/New_York',
       timeZoneName: 'short',
     });
