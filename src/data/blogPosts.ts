@@ -9,6 +9,28 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'repliable.ai',
+    title: 'So I Did a Thing...Repliable.ai',
+    date: 'June 24, 2026',
+    content: `
+      I built an AI tool that does two things I haven't really seen elsewhere.
+
+      It's called Repliable.ai.
+
+      First, it remembers the people you talk to. Sure, you can set up a project in ChatGPT or Gemini and feed it context, but you have to remember to go back to the right place. Repliable just holds it for you. You tell it about someone once, and it's there. Forever.
+
+      So when a message comes in, it already knows the context and gives you a few ways to respond that fit that specific person, each with a tone you can dial from direct to warm. The more messages it sees, the sharper it gets.
+
+      Second, it tells you how you communicate. Not the other person, you. Your patterns, how you write under pressure, where you over-explain, what you're working on. Over time, it sharpens that even more.
+
+      That's the part people don't expect. One tester got feedback in her performance review to be more direct, something Repliable had already flagged for her weeks earlier. And building it, I had a few of those moments too. It started feeling less like a writing tool and more like a window into understanding myself.
+
+      Live and free at repliable.ai. I'd love to know what you think. :)
+    `,
+    tags: ['repliable', 'ai', 'website', 'development', 'product-launch'],
+    excerpt: 'I built an AI tool that does two things I haven\'t really seen elsewhere. It\'s called Repliable.ai. First, it remembers the people you talk to. Sure, you can set up a project in ChatGPT or Gemini and feed it context, but you have to remember to go back to the right place. Repliable just holds it for you. You tell it about someone once, and it\'s there. Forever. So when a message comes in, it already knows the context and gives you a few ways to respond that fit that specific person, each with a tone you can dial from direct to warm. The more messages it sees, the sharper it gets. Second, it tells you how you communicate. Not the other person, you. Your patterns, how you write under pressure, where you over-explain, what you\'re working on. Over time, it sharpens that even more. That\'s the part people don\'t expect. One tester got feedback in her performance review to be more direct, something Repliable had already flagged for her weeks earlier. And building it, I had a few of those moments too. It started feeling less like a writing tool and more like a window into understanding myself. Live and free at repliable.ai. I\'d love to know what you think. :)',
+  },
+  {
     id: 'portfolio-newspaper-redesign',
     title: 'I Turned My Portfolio Into a Newspaper',
     date: 'June 10, 2026',
