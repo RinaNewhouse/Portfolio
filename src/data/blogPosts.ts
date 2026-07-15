@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
 
       I’ve always liked editorial design — mastheads, section bars, pull quotes, the sense that someone <em>laid this out on purpose.</em> Software engineering is creative work. I wanted a site that felt like that: structured, confident, a little dramatic, but still readable.
 
-      The new version is called <strong>The Newhouse Tribune</strong>. Vol. 02, Iss. 26. Baltimore in the dateline. A ticker at the bottom. Project cards that look like feature stories instead of SaaS landing pages.
+      The new version is called <strong>The Newhouse Tribune</strong>. Vol. 02, Iss. 26. Chicago in the dateline. A ticker at the bottom. Project cards that look like feature stories instead of SaaS landing pages.
 
       <strong>What actually changed</strong>
 

@@ -144,7 +144,7 @@ export default function MagazinePortfolio() {
       minute: '2-digit',
       second: '2-digit',
       hour12: false,
-      timeZone: 'America/New_York',
+      timeZone: 'America/Chicago',
       timeZoneName: 'short',
     });
 
@@ -237,7 +237,7 @@ export default function MagazinePortfolio() {
       <div className="topband">
         <div>Vol. 02 · Iss. 26</div>
         <div className="center">Rina Newhouse — Portfolio &amp; Field Notes</div>
-        <div className="right">{clock} · Baltimore, MD</div>
+        <div className="right">{clock} · Chicago, IL</div>
       </div>
 
       <header className="masthead">
@@ -348,7 +348,7 @@ export default function MagazinePortfolio() {
             <span className="dot">●</span>
             <span>React · TypeScript · Next.js</span>
             <span className="dot">●</span>
-            <span>Baltimore based, Chicago soon</span>
+            <span>Chicago based</span>
             <span className="dot">●</span>
             <span>Design-conscious code</span>
             <span className="dot">●</span>
@@ -360,7 +360,7 @@ export default function MagazinePortfolio() {
             <span className="dot">●</span>
             <span>React · TypeScript · Next.js</span>
             <span className="dot">●</span>
-            <span>Baltimore based, Chicago soon</span>
+            <span>Chicago based</span>
             <span className="dot">●</span>
             <span>Design-conscious code</span>
             <span className="dot">●</span>
@@ -563,7 +563,7 @@ export default function MagazinePortfolio() {
           <span className="lab">Focus</span>
           <strong>Frontend &amp; full-stack</strong>
           <span className="lab">Currently</span>
-          <strong>Baltimore, MD</strong>
+          <strong>Chicago, IL</strong>
         </div>
         <div className="pull">
           The job is to turn vague ideas into things people can <em>actually</em> use — and keep them
