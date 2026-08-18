@@ -36,7 +36,12 @@ const getSkillLevel = (skill: string): string => {
     Express: 'A',
     Python: 'B+',
     'REST APIs': 'A',
+    Supabase: 'A-',
     Git: 'A+',
+    GitHub: 'A',
+    AWS: 'A-',
+    Terraform: 'B+',
+    Docker: 'B+',
     Vite: 'A',
     'VS Code': 'A+',
     Figma: 'B+',
@@ -190,7 +195,7 @@ export default function MagazinePortfolio() {
 
   const frontendSkills = skills.filter((skill) => skill.category === 'frontend');
   const backendSkills = skills.filter((skill) => skill.category === 'backend');
-  const dataSkills = ['PostgreSQL', 'Prisma', 'Clerk', 'Stripe'];
+  const dataSkills = ['PostgreSQL', 'Prisma', 'Supabase', 'Clerk', 'Stripe'];
   const toolSkills = skills.filter((skill) => skill.category === 'tools');
 
   const closeOverlays = () => navigate('/');

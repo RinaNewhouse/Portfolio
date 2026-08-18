@@ -20,6 +20,10 @@ export const skills: Skill[] = [
   
   // Tools & Technologies
   { name: 'Git', category: 'tools' },
+  { name: 'GitHub', category: 'tools' },
+  { name: 'AWS', category: 'tools' },
+  { name: 'Terraform', category: 'tools' },
+  { name: 'Docker', category: 'tools' },
   { name: 'Vite', category: 'tools' },
   { name: 'VS Code', category: 'tools' },
   { name: 'Figma', category: 'design' },
